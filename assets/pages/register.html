@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+
+
+    <link rel="stylesheet" href="/assets/css/l-desk-css/ldesk-register.css">
+    <!-- <link rel="stylesheet" href="/assets/css/lap-css/lap-register.css"> -->
+
+</head>
+<body ng-app="myApp">
+
+    <form class="form" ng-controller="validateCtrl" name="myForm" ng-submit="submitForm(myForm)" novalidate>
+        <h1>Register</h1>
+
+        <i class="fa-solid fa-user"></i>
+        <label>First Name</label> <br>
+        <i class="fa-solid fa-circle-info info"></i>
+        <input type="text" name="firstname" ng-model="firstname" required 
+            ng-class="{'invalid': myForm.firstname.$touched && myForm.firstname.$invalid, 
+            'valid': myForm.firstname.$touched && myForm.firstname.$valid}"> <br>
+        <span class="message" style="color:red" ng-show="myForm.firstname.$touched && myForm.firstname.$invalid">
+            <span ng-show="myForm.firstname.$error.required">First name is required.</span>
+        </span> <br>
+
+
+
+        <i class="fa-solid fa-user"></i>
+        <label>Last Name</label> <br>
+        <i class="fa-solid fa-circle-info info"></i>
+        <input type="text" name="lastname" ng-model="lastname" required 
+            ng-class="{'invalid': myForm.lastname.$touched && myForm.lastname.$invalid, 
+            'valid': myForm.lastname.$touched && myForm.lastname.$valid}"> 
+        <br>
+        <span class="message" style="color:red" ng-show="myForm.lastname.$touched && myForm.lastname.$invalid">
+            <span ng-show="myForm.lastname.$error.required">Last name is required.</span>
+        </span> <br>
+
+
+
+        <i class="fa-solid fa-phone"></i>
+        <label>Mobile Number</label> <br>
+        <i class="fa-solid fa-circle-info info"></i>
+        <input class="mobile" type="number" name="mobile" ng-model="mobile" required 
+            ng-class="{'invalid': myForm.number.$touched && myForm.number.$invalid, 
+            'valid': myForm.number.$touched && myForm.number.$valid}"> <br>
+        <span class="message" style="color:red" ng-show="myForm.mobile.$touched && myForm.mobile.$invalid">
+            <span ng-show="myForm.mobile.$error.required">Mobile number is required.</span>
+        </span> <br>
+
+
+
+        <i class="fa-solid fa-envelope"></i>
+        <label>Email</label> <br>
+        <i class="fa-solid fa-circle-info info"></i>
+        <input type="email" name="email" ng-model="email" required
+            ng-class="{'invalid': myForm.email.$touched && myForm.email.$invalid, 
+            'valid': myForm.email.$touched && myForm.email.$valid}"> <br>
+        <span class="message" style="color:red" ng-show="myForm.email.$touched && myForm.email.$invalid">
+            <span ng-show="myForm.email.$error.required">Email is required.</span>
+        </span> <br>
+
+
+
+        <i class="fa-solid fa-lock"></i>
+        <label>Password</label> <br>
+        <i class="fa-solid fa-circle-info info"></i>
+        <input type="password" name="password" ng-model="password" required
+            ng-class="{'invalid': myForm.password.$touched && myForm.password.$invalid, 
+            'valid': myForm.password.$touched && myForm.password.$valid}"> <br>
+        <span class="message" style="color:red" ng-show="myForm.password.$touched && myForm.password.$invalid">
+            <span ng-show="myForm.password.$error.required">Password is required.</span>
+        </span> <br>
+
+        
+
+        <i class="fa-solid fa-lock"></i>
+        <label>Confirm Password</label> <br>
+        <i class="fa-solid fa-circle-info info"></i>
+        <input type="password" name="confirmpassword" ng-model="confirmpassword" required
+            ng-class="{'invalid': myForm.confirmpassword.$touched && myForm.confirmpassword.$invalid, 
+            'valid': myForm.confirmpassword.$touched && myForm.confirmpassword.$valid}"> <br>
+        <span class="message" style="color:red" ng-show="myForm.confirmpassword.$touched ">
+            <span ng-show="myForm.confirmpassword.$error.required">Confirm password is required.</span>
+            <span ng-show="password !== confirmpassword">Passwords do not match.</span>
+        </span> <br>
+
+        <p class="already-have-an-account"> <a href="/assets/pages/login.html">Already have an account? </a> </p>
+
+        <div class="btn">
+            <button type="submit">Sign-Up</button>
+        </div>
+
+    </form>
+
+
+
+
+
+
+
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('validateCtrl', function($scope) {
+        $scope.submitForm = function(form) {
+            if (form.$invalid || $scope.password !== $scope.confirmpassword) {
+                // Mark all fields as touched to trigger validation messages
+                angular.forEach(form.$error.required, function(field) {
+                    field.$setTouched();
+                });
+            } else {
+                // Handle successful form submission here
+                alert("Registered successfully!");
+                window.location.href = '/assets/pages/login.html';
+            }
+        };
+    });
+</script>
+
+</body>
+</html>

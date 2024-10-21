@@ -1,0 +1,213 @@
+/* Laptop */
+
+@media (min-width: 992px) and (max-width: 1200px){
+    body {
+        margin: 0;
+        padding: 0;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html{
+        height: 100%;
+        background: linear-gradient(90deg, rgb(244, 241, 241), rgb(215, 209, 249));
+    }
+
+    .form {
+        position: fixed;
+        width: 35%;
+        height: 92vh;
+        top: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(100%);
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px rgb(71, 70, 70);
+        color: rgb(7, 39, 74);
+    }
+
+    .form h1{
+        margin-bottom: 0.2rem;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .form i{
+        font-size: large;
+        backdrop-filter: blur(100%);
+        color: rgb(97, 97, 134);
+        margin-left: 10%;
+        margin-top: 5px;
+    }
+
+    .form label{
+        margin-left: 5px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .form input{
+        font-size: 15px;
+        color: rgb(97, 97, 134);
+        margin-top: 5px;
+        margin-left: 10%;
+        width: 75%;
+        padding: 8px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 0px 3px 0px rgb(71, 70, 70);
+    }
+
+    .mobile[type="number"]::-webkit-inner-spin-button,
+    .mobile[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .mobile[type="number"] {
+        --moz-appearance: textfield;
+    }
+
+
+    .form .message{
+        font-size: 15px;
+        position: fixed;
+        margin-left: 10%;
+    }
+
+    .already-have-an-account{
+        margin-top: 0rem;
+        text-align: center;
+    }
+
+    .already-have-an-account a{
+        text-decoration: none;
+        color: rgb(7, 39, 74);
+    }
+
+    button{
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 5px;
+        border: none;
+        box-shadow: 0px 0px 1px 0px rgb(71, 70, 70);
+        border-radius: 8px;
+        margin-left: 40%;
+        padding: 10px 25px;
+    }
+
+    button:hover{
+        cursor: pointer;
+        border: none;
+        background: linear-gradient(90deg, rgb(215, 209, 249), rgb(244, 241, 241));
+        color: rgb(0, 0, 0);
+        box-shadow: 0px 0px 3px 0px rgb(71, 70, 70);
+        
+    }    body {
+        margin: 0;
+        padding: 0;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html{
+        height: 100%;
+        background: linear-gradient(90deg, rgb(244, 241, 241), rgb(215, 209, 249));
+    }
+
+    .form {
+        position: fixed;
+        width: 35%;
+        height: 92vh;
+        top: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(100%);
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px rgb(71, 70, 70);
+        color: rgb(7, 39, 74);
+    }
+
+    .form h1{
+        margin-bottom: 0.2rem;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .form i{
+        font-size: large;
+        backdrop-filter: blur(100%);
+        color: rgb(97, 97, 134);
+        margin-left: 10%;
+        margin-top: 5px;
+    }
+
+    .form label{
+        margin-left: 5px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .form input{
+        font-size: 15px;
+        color: rgb(97, 97, 134);
+        margin-top: 5px;
+        margin-left: 10%;
+        width: 75%;
+        padding: 8px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 0px 3px 0px rgb(71, 70, 70);
+    }
+
+    .mobile[type="number"]::-webkit-inner-spin-button,
+    .mobile[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .mobile[type="number"] {
+        --moz-appearance: textfield;
+    }
+
+
+    .form .message{
+        font-size: 15px;
+        position: fixed;
+        margin-left: 10%;
+    }
+
+    .already-have-an-account{
+        margin-top: 0rem;
+        text-align: center;
+    }
+
+    .already-have-an-account a{
+        text-decoration: none;
+        color: rgb(7, 39, 74);
+    }
+
+    button{
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 5px;
+        border: none;
+        box-shadow: 0px 0px 1px 0px rgb(71, 70, 70);
+        border-radius: 8px;
+        margin-left: 40%;
+        padding: 10px 25px;
+    }
+
+    button:hover{
+        cursor: pointer;
+        border: none;
+        background: linear-gradient(90deg, rgb(215, 209, 249), rgb(244, 241, 241));
+        color: rgb(0, 0, 0);
+        box-shadow: 0px 0px 3px 0px rgb(71, 70, 70);
+        
+    }
+}
+
+
